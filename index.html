@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="app">
+    <div class="quiz-card">
+
+      <div class="brand">✦ Quick Quiz</div>
+
+      <!-- Welcome Screen -->
+      <section id="welcome-screen" class="screen">
+        <div class="hero-icon">🧠</div>
+        <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+        <h1>Ready for a quick quiz?</h1>
+        <p class="muted">
+          Answer 5 fun general knowledge questions
+          and see how you score.
+        </p>
+
+        <ul class="details">
+          <li>✓ 5 multiple-choice questions</li>
+          <li>✓ Instant answer feedback</li>
+          <li>✓ Your final score</li>
+        </ul>
+
+        <button id="start-btn" class="primary-btn">
+          Start Quiz →
+        </button>
+      </section>
+
+      <!-- Quiz Screen -->
+      <section id="quiz-screen" class="screen" hidden>
+        <div class="quiz-topline">
+          <span id="question-count" class="eyebrow">
+            QUESTION 1 OF 5
+          </span>
+          <span id="score-label">Score: 0</span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <h1 id="question-text" class="question-title"></h1>
+
+        <div id="answer-list" class="answer-list"></div>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+
+        <button id="next-btn" class="primary-btn" disabled>
+          Next Question →
+        </button>
+      </section>
+
+      <!-- Result Screen -->
+      <section id="result-screen" class="screen" hidden>
+        <div id="result-icon" class="hero-icon">🏆</div>
+
+        <p class="eyebrow">QUIZ COMPLETE</p>
+        <h1 id="result-title">Well done!</h1>
+
+        <p id="result-message" class="muted"></p>
+
+        <div class="result-score">
+          <strong id="final-score">0/5</strong>
+          <span id="score-percent">0%</span>
+        </div>
+
+        <p id="result-detail" class="muted"></p>
+
+        <button id="restart-btn" class="primary-btn">
+          Try Again ↻
+        </button>
+      </section>
+
+      <footer>
+        Made with <span>♥</span> using HTML, CSS &amp; JavaScript
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>
